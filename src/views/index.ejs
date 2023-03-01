@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .img{
+            position: absolute;
+            height: 100px;
+        }
+
+        @media (max-width: 600px){
+            svg{
+                width: 350px;
+            }
+        }
+    </style>
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Firmar Peticion De Renuncia del Actual Dictador Nicolas Maduro</h1>
+                    </div>
+                    <div class="card-body">
+                        <form action="/crear" method="post">
+                            <input type="text" name="nombre" placeholder="nombre"   required id=""
+                                class="form-control form-group mt-3">
+                            <input type="text" name="apellido" placeholder="apellido" required id=""
+                                class="form-control form-group mt-3">
+                            <input type="email" name="correo" placeholder="correo" required id=""
+                                class="form-control form-group mt-3">
+                            <input type="text" name="estado" placeholder="estado" required id=""
+                                class="form-control form-group mt-3">
+                            <input type="number" name="edad" placeholder="edad" required id=""
+                                class="form-control form-group mt-3">
+                            <input type="checkbox" required name="bot" class="form-group">
+                            <label for="bot" class="m-3">No Soy Un Robot</label>
+                            <button type="submit" class="btn btn-primary form-group form-control">Firmar
+                                Peticion</button>
+                        </form>
+                        <a class="btn btn-success mt-2 form-control" href="https://api.whatsapp.com/send?text=Visita%20el%20blog%20de%20Parzibyte%20en%20https://www.youtube.com/">Compartir por whatsapp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h1>FIRMAS TOTALES: <span id="result">
+                        <%= firmas %>
+                    </span></h1>
+                    <p><strong>¿PORQUE NICOLAS MADURO NO DEBERIA DIRIGIR VENEZUELA?</strong> <br> <br> <b>Crisis económica:</b> Venezuela se encuentra inmersa en una profunda crisis económica, caracterizada por la hiperinflación, la escasez de alimentos y medicinas, la caída de la producción petrolera y el aumento del desempleo. Maduro ha implementado políticas económicas que han empeorado la situación, como el control de precios, la expropiación de empresas privadas y la emisión de dinero sin respaldo. En lugar de tomar medidas efectivas para solucionar la crisis, Maduro ha culpado a factores externos como la guerra económica y los supuestos sabotajes. <br>
+
+                        <b>Violación de derechos humanos:</b> Durante el gobierno de Maduro, se han cometido numerosas violaciones de derechos humanos, incluyendo la represión de protestas pacíficas, la tortura de prisioneros políticos, la censura de medios de comunicación y la persecución de opositores políticos. Además, la crisis humanitaria en Venezuela ha llevado a la migración masiva de millones de personas que huyen de la falta de oportunidades, la inseguridad y la falta de servicios básicos. <br>
+                        
+                        <b>Falta de legitimidad:</b> Maduro llegó al poder en 2013 tras la muerte de Hugo Chávez, pero su elección ha sido cuestionada por numerosos sectores que denuncian fraude y falta de transparencia en el proceso electoral. Desde entonces, ha mantenido su gobierno a través de prácticas antidemocráticas, como la manipulación del poder judicial, la creación de una Asamblea Constituyente ilegítima y la eliminación de la autonomía de los poderes públicos. <br> <br>
+                        
+                       <strong>En resumen, Nicolás Maduro no debería dirigir Venezuela debido a su fracaso en solucionar la crisis económica, su historial de violaciones de derechos humanos y su falta de legitimidad como líder.</p></strong>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <script src="/src/public/min.js"></script>
+
+</body>
+
+</html>
